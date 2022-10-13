@@ -3,4 +3,4 @@ oci
 wget
 os
 zipfile
-python_terraform
+python_terraform==0.10.1
