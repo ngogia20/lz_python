@@ -1,5 +1,5 @@
 fdk
 oci
 wget
-zipfile
-python_terraform==0.10.1
+#zipfile
+python_terraform
