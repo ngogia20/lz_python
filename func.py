@@ -34,14 +34,15 @@ def ocr_lz():
 
     # Websocket logic also need to be applied for logs
     print(stdout1,stderr1)
+    return[stdout1,stderr1]
 
 def handler(ctx, data: io.BytesIO=None):
     print("Entering Python Hello World handler", flush=True)
-    name = "World"
+    ret = "World"
     try:
         #body = json.loads(data.getvalue())
         #name = body.get("name")
-        ocr_lz()
+        ret=ocr_lz()
     except (Exception, ValueError) as ex:
         print(str(ex), flush=True)
 
@@ -49,6 +50,6 @@ def handler(ctx, data: io.BytesIO=None):
     #print("Exiting Python Hello World handler", flush=True)
     return response.Response(
         ctx, response_data=json.dumps(
-            {"200": "Landing Zone Orchestrated Successfully "}),
+            {"200": ret}),
         headers={"Content-Type": "application/json"}
     )
