@@ -1,0 +1,6 @@
+fdk
+oci
+wget
+os
+zipfile
+python_terraform
