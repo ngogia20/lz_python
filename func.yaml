@@ -2,5 +2,5 @@ schema_version: 20180708
 name: hello-python
 version: 0.0.1
 runtime: python
-entrypoint: /python/bin/fdk /function/orch_terr.py handler
+entrypoint: /python/bin/fdk /function/fun.py handler
 memory: 256
