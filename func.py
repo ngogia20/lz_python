@@ -50,6 +50,7 @@ def handler(ctx, data: io.BytesIO=None):
         gurl = "https://github.com/ngogia20/oci_lz/archive/refs/heads/master.zip"
         dir_name = "/tmp"
         ret="200"
+        os.chdir(dir_name)
         wget.download(gurl,out=dir_name)
         # dir_name = '/tmp' #os.getcwd()
         extension = ".zip"
