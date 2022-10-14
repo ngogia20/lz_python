@@ -70,6 +70,8 @@ def handler(ctx, data: io.BytesIO=None):
         dir_list=os.listdir(os.getcwd())
         ret=dir_list
         os.chdir("oci_lz-master")
+        dir_list1=os.listdir(os.getcwd())
+        ret=dir_list1
         t = Terraform(working_dir=".")
         return_code0, stdout0, stderr = t.init()
         ret="334"
