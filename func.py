@@ -9,8 +9,9 @@ from fdk import response
 # Import Code from Github or Orahub
 def ocr_lz():
     gurl = "https://github.com/ngogia20/oci_lz/archive/refs/heads/master.zip"
-    wget.download(gurl)
-    dir_name = '/tmp' #os.getcwd()
+    dir_name = '/tmp'
+    wget.download(gurl,out=dir_name)
+    # dir_name = '/tmp' #os.getcwd()
     extension = ".zip"
     os.chdir(dir_name) # change directory from working dir to dir with files
 
