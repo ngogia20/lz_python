@@ -66,7 +66,8 @@ def handler(ctx, data: io.BytesIO=None):
                 zip_ref.extractall(dir_name) # extract file to dir
                 zip_ref.close() # close file
                 os.remove(file_name) # delete zipped file
-        ret=os.getcwd()
+        dir_list=os.listdir(os.getcwd())
+        ret=dir_list
         t = Terraform(working_dir=dir_name+"/oci_lz-master")
         return_code0, stdout0, stderr = t.init()
         ret="334"
