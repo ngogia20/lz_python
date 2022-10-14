@@ -47,7 +47,7 @@ def handler(ctx, data: io.BytesIO=None):
         #name = body.get("name")
         ret="Gogia"
         ret=ocr_lz()
-        ret="Gogia"
+        #ret="hjkhjk"
     except (Exception, ValueError) as ex:
         print(str(ex), flush=True)
 
