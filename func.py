@@ -9,7 +9,7 @@ ret = "Nikesh"
 # Import Code from Github or Orahub
 def ocr_lz():
     gurl = "https://github.com/ngogia20/oci_lz/archive/refs/heads/master.zip"
-    dir_name = '/tmp'
+    dir_name = '/tmp/'
     ret="200"
     wget.download(gurl,out=dir_name)
     # dir_name = '/tmp' #os.getcwd()
@@ -24,7 +24,7 @@ def ocr_lz():
             zip_ref.extractall(dir_name) # extract file to dir
             zip_ref.close() # close file
             os.remove(file_name) # delete zipped file
-    t = Terraform(working_dir=dir_name+"/oci_lz-master")
+    t = Terraform(working_dir=dir_name+"oci_lz-master")
 
     #t = Terraform(working_dir='.')
 
