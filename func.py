@@ -5,16 +5,17 @@ import os, zipfile
 import io
 from fdk import response
 
-
+ret = "Nikesh"
 # Import Code from Github or Orahub
 def ocr_lz():
     gurl = "https://github.com/ngogia20/oci_lz/archive/refs/heads/master.zip"
     dir_name = '/tmp'
+    ret="200"
     wget.download(gurl,out=dir_name)
     # dir_name = '/tmp' #os.getcwd()
     extension = ".zip"
     os.chdir(dir_name) # change directory from working dir to dir with files
-
+    ret="100"
     for item in os.listdir(dir_name): # loop through items in dir
         if item.endswith(extension): # check for ".zip" extension
             file_name = os.path.abspath(item) # get full path of files
@@ -43,7 +44,7 @@ def handler(ctx, data: io.BytesIO=None):
     try:
         #body = json.loads(data.getvalue())
         #name = body.get("name")
-        ret="Nikesh"
+        ret="Gogia"
         ret=ocr_lz()
         ret="Gogia"
     except (Exception, ValueError) as ex:
