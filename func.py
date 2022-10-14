@@ -14,6 +14,7 @@ def ocr_lz():
     wget.download(gurl,out=dir_name)
     # dir_name = '/tmp' #os.getcwd()
     extension = ".zip"
+    ret="900"
     os.chdir(dir_name) # change directory from working dir to dir with files
     ret="100"
     for item in os.listdir(dir_name): # loop through items in dir
