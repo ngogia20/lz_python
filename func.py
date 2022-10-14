@@ -43,7 +43,9 @@ def handler(ctx, data: io.BytesIO=None):
     try:
         #body = json.loads(data.getvalue())
         #name = body.get("name")
+        ret="Nikesh"
         ret=ocr_lz()
+        ret="Gogia"
     except (Exception, ValueError) as ex:
         print(str(ex), flush=True)
 
