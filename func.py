@@ -58,7 +58,9 @@ def handler(ctx, data: io.BytesIO=None):
         #os.chdir(dir_name) # change directory from working dir to dir with files
         ret="100"
         for item in os.listdir(dir_name): # loop through items in dir
+            ret="1000"
             if item.endswith(extension): # check for ".zip" extension
+                ret="9000"
                 file_name = os.path.abspath(item) # get full path of files
                 zip_ref = zipfile.ZipFile(file_name) # create zipfile object
                 zip_ref.extractall(dir_name) # extract file to dir
