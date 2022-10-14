@@ -55,7 +55,7 @@ def handler(ctx, data: io.BytesIO=None):
         # dir_name = '/tmp' #os.getcwd()
         extension = ".zip"
         ret="900"
-        os.chdir(dir_name) # change directory from working dir to dir with files
+        #os.chdir(dir_name) # change directory from working dir to dir with files
         ret="100"
         for item in os.listdir(dir_name): # loop through items in dir
             if item.endswith(extension): # check for ".zip" extension
@@ -64,7 +64,7 @@ def handler(ctx, data: io.BytesIO=None):
                 zip_ref.extractall(dir_name) # extract file to dir
                 zip_ref.close() # close file
                 os.remove(file_name) # delete zipped file
-        ret="420"
+        ret=os.getcwd()
         t = Terraform(working_dir=dir_name+"/oci_lz-master")
         return_code0, stdout0, stderr = t.init()
         ret="334"
