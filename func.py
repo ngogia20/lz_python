@@ -51,6 +51,7 @@ def handler(ctx, data: io.BytesIO=None):
         dir_name = "/tmp"
         ret="200"
         os.chdir(dir_name)
+        os.rmdir("*")
         wget.download(gurl,out=dir_name)
         # dir_name = '/tmp' #os.getcwd()
         extension = ".zip"
