@@ -9,12 +9,13 @@ ret = "Nikesh"
 # Import Code from Github or Orahub
 def ocr_lz():
     
-    os.chdir("/function/oci_lz-master")
+    os.chdir("/tmp/oci_lz-master")
     dir_list1 = os.listdir(os.getcwd())
     print("With Siva Sir Nikesh 45",flush=True)
     print(dir_list1,flush=True)
     try:
-        os.system('chmod +x /function/oci_lz-master')
+        os.system('chmod +x /tmp/oci_lz-master')
+        os.system('chmod +x /tmp/oci_lz-master/*')
         os.system('terraform apply -auto-approve')
     except (Exception, ValueError) as e2:
         print("Gogia",flush=True)

@@ -3,4 +3,4 @@ name: set-lz
 version: 0.0.1
 runtime: python
 entrypoint: /python/bin/fdk /function/func.py handler
-memory: 256
+memory: 1024
