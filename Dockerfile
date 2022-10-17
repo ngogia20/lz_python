@@ -16,4 +16,5 @@ RUN pip3 install terraform-install
 RUN terraform -version
 #RUN which terraform
 RUN chmod +x /usr/local/bin/terraform
+RUN ls -l /usr/local/bin/terraform
 ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]
