@@ -33,9 +33,9 @@ def ocr_lz():
     t = Terraform(os.getcwd())
     print(t,flush=True)
 
-    comm=os.system('terraform -version')
-    print("With Siva Sir Nikesh",flush=True)
-    print(comm,flush=True)
+    #comm=os.system('terraform -version')
+    #print("With Siva Sir Nikesh",flush=True)
+    #print(comm,flush=True)
 
     #ret0,stdout0, stderr0=t.init()
     #print("With Siva",flush=True)
