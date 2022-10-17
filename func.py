@@ -31,7 +31,7 @@ def ocr_lz():
     print(dir_list,flush=True)
     print("Check Here",flush=True)
     t = Terraform("/tmp/oci_lz-master")
-    print(t,flush=true)
+    print(t,flush=True)
     # Start Terraform init, apply
     return_code0, stdout0, stderr = t.init("/tmp/oci_lz-master")
     return_code0, stdout2, stderr2 = t.plan()
