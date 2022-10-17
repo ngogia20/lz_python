@@ -32,11 +32,12 @@ def ocr_lz():
     print("Check Here",flush=True)
     t = Terraform(os.getcwd())
     print(t,flush=True)
+    return ret
     # Start Terraform init, apply
-    return_code0, stdout0, stderr = t.init(os.getcwd())
+    #return_code0, stdout0, stderr = t.init(os.getcwd())
     #return_code0, stdout2, stderr2 = t.plan()
     #return_code1, stdout1, stderr1 = t.apply(skip_plan=True)
-    return stderr
+    #return stderr
     # Websocket logic also need to be applied for logs
     #print(stdout1,stderr1)
     #return[stdout1,stderr1]
