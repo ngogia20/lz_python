@@ -44,9 +44,12 @@ def ocr_lz():
     print(comm10,flush=True)
 
     os.chdir("/function/oci_lz-master")
+    dir_list1 = os.listdir(os.getcwd())
+    print("With Siva Sir Nikesh 45",flush=True)
+    print(dir_list1,flush=True)
     comm4=os.system('terraform apply -auto-approve')
 
-    print("With Siva Sir Nikesh 2",flush=True)
+    print("With Siva Sir Nikesh 3",flush=True)
     print(comm4,flush=True)
 
 
