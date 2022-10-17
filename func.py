@@ -33,8 +33,8 @@ def ocr_lz():
     print(dir_list,flush=True)
     print("Check Here",flush=True)
     
-    t = Terraform(os.getcwd())
-    print(t,flush=True)
+    #t = Terraform(os.getcwd())
+    #print(t,flush=True)
 
     comm1=os.system('ls -l')
     print("With Siva Sir Nikesh",flush=True)
