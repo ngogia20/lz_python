@@ -1,5 +1,5 @@
 fdk
 oci
 wget
-python_terraformmm
+python_terraform
 check
