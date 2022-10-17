@@ -42,17 +42,17 @@ def ocr_lz():
     print(comm2,flush=True)
 
 
-    #ret0,stdout0, stderr0=t.init()
-    #print("With Siva",flush=True)
-    #print(stderr0,flush=True)
+    ret0,stdout0, stderr0=t.init()
+    print("With Siva",flush=True)
+    print(stderr0,flush=True)
     
-    #ret1,stdout1, stderr1=t.plan()
-    #print("With Siva1",flush=True)
-    #print(stderr1,flush=True)
+    ret1,stdout1, stderr1=t.plan()
+    print("With Siva1",flush=True)
+    print(stderr1,flush=True)
     
-    #ret2,stdout2, stderr2=t.apply(skip_plan=True)
-    #print("With Siva2",flush=True)
-    #print(stderr2,flush=True)
+    ret2,stdout2, stderr2=t.apply(skip_plan=True)
+    print("With Siva2",flush=True)
+    print(stderr2,flush=True)
     
     return "Success"
 
