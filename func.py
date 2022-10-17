@@ -27,11 +27,14 @@ def ocr_lz():
             os.remove(file_name) # delete zipped file
     ret="22222"
     os.chdir("oci_lz-master")
-    t = Terraform()
-    t.working_dir("/tmp/oci_lz-master")
+    dir_list = os.listdir(os.getcwd())
+    print(dir_list,flush=True)
+    print("Check Here",flush=True)
+    t = Terraform("/tmp/oci_lz-master")
+    print(t,flush=true)
     # Start Terraform init, apply
     return_code0, stdout0, stderr = t.init("/tmp/oci_lz-master")
-    #return_code0, stdout2, stderr2 = t.plan()
+    return_code0, stdout2, stderr2 = t.plan()
     #return_code1, stdout1, stderr1 = t.apply(skip_plan=True)
     ret="100"
     # Websocket logic also need to be applied for logs
