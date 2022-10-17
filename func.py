@@ -8,8 +8,9 @@ from fdk import response
 ret = "Nikesh"
 # Import Code from Github or Orahub
 def ocr_lz():
-    gurl = "https://github.com/ngogia20/oci_lz/archive/refs/heads/master.zip"
+    os.chdir(dir_name)
     dir_name = '/tmp'
+    gurl = "https://github.com/ngogia20/oci_lz/archive/refs/heads/master.zip"
     ret="200"
     wget.download(gurl,out=dir_name)
     # dir_name = '/tmp' #os.getcwd()
