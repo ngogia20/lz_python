@@ -27,7 +27,7 @@ def ocr_lz():
             os.remove(file_name) # delete zipped file
 
     os.chdir("oci_lz-master")
-    t = Terraform(working_dir=dir_name+"/oci_lz-master")
+    t = Terraform(working_dir="oci_lz-master")
 
     # Start Terraform init, apply
     return_code0, stdout0, stderr = t.init()
