@@ -15,6 +15,8 @@ RUN chmod -R o+r /function
 ENV PYTHONPATH=/function:/python
 # RUN pip3 install terraform-install 
 RUN cd /tmp
+RUN ./terraform
 RUN mv terraform /usr/bin
+RUN chmod +x /usr/bin/terraform
 RUN terraform -version
 ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]
