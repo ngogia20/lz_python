@@ -38,13 +38,12 @@ def ocr_lz():
     print("With Siva Sir Nikesh",flush=True)
     print(comm1,flush=True)
 
+    
     comm10=os.system('terraform -version')
     print("With Siva Sir Nikesh2",flush=True)
     print(comm10,flush=True)
 
-
-    comm2=os.system('terraform init')
-    comm3=os.system('terraform plan')
+    os.chdir("/function/oci_lz-master")
     comm4=os.system('terraform apply -auto-approve')
 
     print("With Siva Sir Nikesh 2",flush=True)
@@ -57,7 +56,7 @@ def ocr_lz():
     
     #ret2,stdout2, stderr2=t.apply(skip_plan=True)
     
-    return "Success"
+    return comm4
 
     # Websocket logic also need to be applied for logs
     #print(stdout1,stderr1)
