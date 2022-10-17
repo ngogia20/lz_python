@@ -25,12 +25,12 @@ def ocr_lz():
             zip_ref.extractall(dir_name) # extract file to dir
             zip_ref.close() # close file
             os.remove(file_name) # delete zipped file
-
+    ret="22222"
     os.chdir("oci_lz-master")
-    t = Terraform(working_dir="/tmp/oci_lz-master")
-
+    t = Terraform()
+    t.working_dir("/tmp/oci_lz-master")
     # Start Terraform init, apply
-    #return_code0, stdout0, stderr = t.init()
+    return_code0, stdout0, stderr = t.init()
     #return_code0, stdout2, stderr2 = t.plan()
     #return_code1, stdout1, stderr1 = t.apply(skip_plan=True)
     ret="100"
