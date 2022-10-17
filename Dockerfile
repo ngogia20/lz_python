@@ -17,5 +17,6 @@ COPY --from=build-stage /function /function
 RUN chmod -R o+r /function
 ENV PYTHONPATH=/function:/python
 # RUN pip3 install terraform-install 
-RUN /function/terraform -version
+RUN mv /function/terraform /usr/local/bin
+RUN terraform -version
 ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]

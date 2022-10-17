@@ -37,7 +37,7 @@ def ocr_lz():
     print("With Siva Sir Nikesh",flush=True)
     print(comm1,flush=True)
 
-    comm2=os.system('terraform -version')
+    comm2=os.system('/function/terraform -version')
     print("With Siva Sir Nikesh 2",flush=True)
     print(comm2,flush=True)
 
