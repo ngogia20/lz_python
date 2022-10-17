@@ -5,12 +5,10 @@ RUN pip3 install --target /python/  --no-cache --no-cache-dir -r requirements.tx
     rm -fr ~/.cache/pip /tmp* requirements.txt func.yaml Dockerfile .venv &&\
     chmod -R o+r /python
 ADD . /function/
-ADD terraform /tmp
-RUN cd /tmp
-RUN cat /proc/cpuinfo
+ADD terraform /function/
 RUN chmod +x terraform
-RUN /tmp/terraform -version
-RUN mv terraform /usr/local/bin
+RUN /function/terraform -version
+RUN mv /function/terraform /usr/local/bin
 RUN rm -fr /function/.pip_cache
 FROM fnproject/python:3.9
 WORKDIR /function
