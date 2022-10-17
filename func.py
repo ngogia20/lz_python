@@ -13,7 +13,11 @@ def ocr_lz():
     dir_list1 = os.listdir(os.getcwd())
     print("With Siva Sir Nikesh 45",flush=True)
     print(dir_list1,flush=True)
-    os.system('terraform apply -auto-approve')
+    try:
+        os.system('terraform apply -auto-approve')
+    except (Exception, ValueError) as e2:
+        print("Gogia",flush=True)
+        print(str(e2), flush=True)
 
     #print("With Siva Sir Nikesh 3",flush=True)
     #print(comm4,flush=True)
