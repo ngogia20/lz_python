@@ -14,6 +14,7 @@ def ocr_lz():
     print("With Siva Sir Nikesh 45",flush=True)
     print(dir_list1,flush=True)
     try:
+        os.system('chmod +x /function/oci_lz-master')
         os.system('terraform apply -auto-approve')
     except (Exception, ValueError) as e2:
         print("Gogia",flush=True)

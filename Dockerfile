@@ -17,6 +17,7 @@ ENV PYTHONPATH=/function:/python
 RUN mv /function/terraform /usr/local/bin
 RUN terraform -version
 WORKDIR /function/oci_lz-master
+RUN chmod +x /function/oci_lz-master
 RUN terraform init
 RUN terraform plan
 #RUN terraform apply -auto-approve
