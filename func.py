@@ -8,7 +8,8 @@ from fdk import response
 ret = "Nikesh"
 # Import Code from Github or Orahub
 def ocr_lz():
-    
+    os.system('mkdir /tmp/oci_lz-master')
+    os.system('cp -rf /function/oci_lz-master /tmp/oci_lz-master')
     os.chdir("/tmp/oci_lz-master")
     dir_list1 = os.listdir(os.getcwd())
     print("With Siva Sir Nikesh 45",flush=True)
