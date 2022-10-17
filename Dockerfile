@@ -15,6 +15,7 @@ RUN chmod -R o+r /function
 ENV PYTHONPATH=/function:/python
 # RUN pip3 install terraform-install 
 RUN cd /tmp
+RUN cat /proc/cpuinfo
 RUN chmod +x terraform
 RUN /tmp/terraform -version
 RUN mv terraform /usr/local/bin
