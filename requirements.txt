@@ -3,3 +3,4 @@ oci
 wget
 #zipfile
 python_terraform
+terraform
