@@ -30,7 +30,7 @@ def ocr_lz():
     t = Terraform()
     t.working_dir("/tmp/oci_lz-master")
     # Start Terraform init, apply
-    return_code0, stdout0, stderr = t.init()
+    return_code0, stdout0, stderr = t.init("/tmp/oci_lz-master")
     #return_code0, stdout2, stderr2 = t.plan()
     #return_code1, stdout1, stderr1 = t.apply(skip_plan=True)
     ret="100"
