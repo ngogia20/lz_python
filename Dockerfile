@@ -6,6 +6,11 @@ RUN pip3 install --target /python/  --no-cache --no-cache-dir -r requirements.tx
     chmod -R o+r /python
 ADD . /function/
 ADD terraform /tmp
+RUN cd /tmp
+RUN cat /proc/cpuinfo
+RUN chmod +x terraform
+RUN /tmp/terraform -version
+RUN mv terraform /usr/local/bin
 RUN rm -fr /function/.pip_cache
 FROM fnproject/python:3.9
 WORKDIR /function
@@ -14,10 +19,5 @@ COPY --from=build-stage /function /function
 RUN chmod -R o+r /function
 ENV PYTHONPATH=/function:/python
 # RUN pip3 install terraform-install 
-RUN cd /tmp
-RUN cat /proc/cpuinfo
-RUN chmod +x terraform
-RUN /tmp/terraform -version
-RUN mv terraform /usr/local/bin
 RUN terraform -version
 ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]
