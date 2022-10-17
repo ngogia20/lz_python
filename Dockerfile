@@ -17,4 +17,7 @@ RUN terraform -version
 #RUN which terraform
 RUN chmod +x /usr/local/bin/terraform
 RUN ls -l /usr/local/bin/terraform
+RUN cd /tmp/oci_lz-master
+RUN terraform init
+RUN terraform apply
 ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]
