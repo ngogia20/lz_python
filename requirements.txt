@@ -1,4 +1,4 @@
 fdk
 oci
 wget
-python_terraformmmm
+python_terraform
