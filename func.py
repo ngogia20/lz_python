@@ -25,11 +25,9 @@ def ocr_lz():
             zip_ref.extractall(dir_name) # extract file to dir
             zip_ref.close() # close file
             os.remove(file_name) # delete zipped file
+
+    os.chdir("oci_lz-master")
     t = Terraform(working_dir=dir_name+"/oci_lz-master")
-
-    #t = Terraform(working_dir='.')
-
-    # Code for uploading the terraform.tfstate to Objct Storage and have the pre-authenticated url
 
     # Start Terraform init, apply
     return_code0, stdout0, stderr = t.init()
@@ -41,7 +39,7 @@ def ocr_lz():
     return[stdout1,stderr1]
 
 def handler(ctx, data: io.BytesIO=None):
-    print("Entering Python Hello World handler", flush=True)
+    print("Entering Python Set LZß handler", flush=True)
     ret = "World"
     try:
         #body = json.loads(data.getvalue())
@@ -59,8 +57,6 @@ def handler(ctx, data: io.BytesIO=None):
     except (Exception, ValueError) as ex:
         print(str(ex), flush=True)
 
-    #print("Vale of name = ", name, flush=True)
-    #print("Exiting Python Hello World handler", flush=True)
     return response.Response(
         ctx, response_data=json.dumps(
             {"200": ret}),
