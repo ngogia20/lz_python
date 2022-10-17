@@ -25,9 +25,7 @@ def ocr_lz():
             zip_ref.extractall(dir_name) # extract file to dir
             zip_ref.close() # close file
             os.remove(file_name) # delete zipped file
-    ret="22222"
-    os.system('chmod +x /tmp/oci_lz-master')
-    os.system('chmod +x /tmp/oci_lz-master/*')
+
     os.chdir("oci_lz-master")
     dir_list = os.listdir(os.getcwd())
     print(dir_list,flush=True)
