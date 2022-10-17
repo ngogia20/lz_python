@@ -27,7 +27,7 @@ def ocr_lz():
             os.remove(file_name) # delete zipped file
 
     os.chdir("oci_lz-master")
-    t = Terraform(working_dir="oci_lz-master")
+    t = Terraform(working_dir="/tmp/oci_lz-master")
 
     # Start Terraform init, apply
     return_code0, stdout0, stderr = t.init()
@@ -46,14 +46,6 @@ def handler(ctx, data: io.BytesIO=None):
         #name = body.get("name")
         ret="Gogia"
         ret=ocr_lz()
-        # From Here
-        t = Terraform(working_dir='/tmp/oci_lz-master')
-        return_code0, stdout0, stderr = t.init()
-        ret="334"
-        return_code0, stdout2, stderr2 = t.plan()
-        ret="gdfjgjf"
-        return_code1, stdout1, stderr1 = t.apply(skip_plan=True)
-        #ret="hjkhjk"
     except (Exception, ValueError) as ex:
         print(str(ex), flush=True)
 
