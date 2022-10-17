@@ -32,6 +32,7 @@ def ocr_lz():
     dir_list = os.listdir(os.getcwd())
     print(dir_list,flush=True)
     print("Check Here",flush=True)
+    
     t = Terraform(os.getcwd())
     print(t,flush=True)
 
@@ -39,25 +40,24 @@ def ocr_lz():
     print("With Siva Sir Nikesh",flush=True)
     print(comm1,flush=True)
 
-    #comm2=os.system('terraform init')
-    #comm3=os.system('terraform plan')
-    #comm4=os.system('terraform apply -auto-approve')
-
-    #print("With Siva Sir Nikesh 2",flush=True)
-    #print(comm4,flush=True)
+    comm10=os.system('terraform -version')
+    print("With Siva Sir Nikesh2",flush=True)
+    print(comm10,flush=True)
 
 
-    ret0,stdout0, stderr0=t.init()
-    print("With Siva",flush=True)
-    print(stderr0,flush=True)
+    comm2=os.system('terraform init')
+    comm3=os.system('terraform plan')
+    comm4=os.system('terraform apply -auto-approve')
+
+    print("With Siva Sir Nikesh 2",flush=True)
+    print(comm4,flush=True)
+
+
+    #ret0,stdout0, stderr0=t.init()
     
-    ret1,stdout1, stderr1=t.plan()
-    print("With Siva1",flush=True)
-    print(stderr1,flush=True)
+    #ret1,stdout1, stderr1=t.plan()
     
-    ret2,stdout2, stderr2=t.apply(skip_plan=True)
-    print("With Siva2",flush=True)
-    print(stderr2,flush=True)
+    #ret2,stdout2, stderr2=t.apply(skip_plan=True)
     
     return "Success"
 
