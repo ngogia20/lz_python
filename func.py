@@ -30,13 +30,13 @@ def ocr_lz():
     t = Terraform(working_dir="/tmp/oci_lz-master")
 
     # Start Terraform init, apply
-    return_code0, stdout0, stderr = t.init()
-    return_code0, stdout2, stderr2 = t.plan()
-    return_code1, stdout1, stderr1 = t.apply(skip_plan=True)
-
+    #return_code0, stdout0, stderr = t.init()
+    #return_code0, stdout2, stderr2 = t.plan()
+    #return_code1, stdout1, stderr1 = t.apply(skip_plan=True)
+    ret="100"
     # Websocket logic also need to be applied for logs
-    print(stdout1,stderr1)
-    return[stdout1,stderr1]
+    #print(stdout1,stderr1)
+    #return[stdout1,stderr1]
 
 def handler(ctx, data: io.BytesIO=None):
     print("Entering Python Set LZß handler", flush=True)
