@@ -9,19 +9,19 @@ ret = "Nikesh"
 # Import Code from Github or Orahub
 def ocr_lz():
     
-    #os.chdir("/function/oci_lz-master")
-    #dir_list1 = os.listdir(os.getcwd())
-    #print("With Siva Sir Nikesh 45",flush=True)
-    #print(dir_list1,flush=True)
-    #comm4=os.system('terraform apply -auto-approve')
+    os.chdir("/function/oci_lz-master")
+    dir_list1 = os.listdir(os.getcwd())
+    print("With Siva Sir Nikesh 45",flush=True)
+    print(dir_list1,flush=True)
+    os.system('terraform apply -auto-approve')
 
     #print("With Siva Sir Nikesh 3",flush=True)
     #print(comm4,flush=True)
 
-    t = Terraform('/function/oci_lz-master')
-    ret2,stdout2, stderr2=t.apply(skip_plan=True)
+    #t = Terraform('/function/oci_lz-master')
+    #ret2,stdout2, stderr2=t.apply(skip_plan=True)
     
-    return [stdout2,stderr2]
+    return "success"
 
     # Websocket logic also need to be applied for logs
     #print(stdout1,stderr1)
