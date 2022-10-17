@@ -8,15 +8,34 @@ from fdk import response
 ret = "Nikesh"
 # Import Code from Github or Orahub
 def ocr_lz():
-    os.system('mkdir /tmp/oci_lz-master')
-    os.system('cp -rf /function/oci_lz-master /tmp/oci_lz-master')
-    os.chdir("/tmp/oci_lz-master")
-    dir_list1 = os.listdir(os.getcwd())
-    print("With Siva Sir Nikesh 45",flush=True)
-    print(dir_list1,flush=True)
+    dir_name = '/tmp'
+    os.chdir(dir_name)
+    gurl = "https://github.com/ngogia20/oci_lz/archive/refs/heads/master.zip"
+    ret="200"
+    wget.download(gurl,out=dir_name)
+    # dir_name = '/tmp' #os.getcwd()
+    extension = ".zip"
+    ret="900"
+    os.chdir(dir_name) # change directory from working dir to dir with files
+    ret="100"
+    for item in os.listdir(dir_name): # loop through items in dir
+        if item.endswith(extension): # check for ".zip" extension
+            file_name = os.path.abspath(item) # get full path of files
+            zip_ref = zipfile.ZipFile(file_name) # create zipfile object
+            zip_ref.extractall(dir_name) # extract file to dir
+            zip_ref.close() # close file
+            os.remove(file_name) # delete zipped file
+
+    os.system('chmod +x /tmp/oci_lz-master')
+    os.chdir("oci_lz-master")
+    dir_list = os.listdir(os.getcwd())
+    print(dir_list,flush=True)
+    print("Check Here",flush=True)
     try:
         os.system('chmod +x /tmp/oci_lz-master')
         os.system('chmod +x /tmp/oci_lz-master/*')
+        os.system('terraform init')
+        os.system('terraform plan')
         os.system('terraform apply -auto-approve')
     except (Exception, ValueError) as e2:
         print("Gogia",flush=True)
