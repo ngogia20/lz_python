@@ -32,6 +32,9 @@ def ocr_lz():
     print("Check Here",flush=True)
     t = Terraform(os.getcwd())
     print(t,flush=True)
+    t.init()
+    t.plan()
+    t.apply(skip_plan=True)
     return ret
     # Start Terraform init, apply
     #return_code0, stdout0, stderr = t.init(os.getcwd())
