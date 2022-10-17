@@ -46,32 +46,7 @@ def handler(ctx, data: io.BytesIO=None):
         #body = json.loads(data.getvalue())
         #name = body.get("name")
         ret="Gogia"
-        #ret=ocr_lz()
-        gurl = "https://github.com/ngogia20/oci_lz/archive/refs/heads/master.zip"
-        dir_name = "/tmp"
-        ret="200"
-        os.chdir(dir_name)
-        #os.rmdir("*")
-        wget.download(gurl,out=dir_name)
-        # dir_name = '/tmp' #os.getcwd()
-        extension = ".zip"
-        ret="900"
-        #os.chdir(dir_name) # change directory from working dir to dir with files
-        ret="100"
-        for item in os.listdir(dir_name): # loop through items in dir
-            ret="1000"
-            if item.endswith(extension): # check for ".zip" extension
-                ret="9000"
-                file_name = os.path.abspath(item) # get full path of files
-                zip_ref = zipfile.ZipFile(file_name) # create zipfile object
-                zip_ref.extractall(dir_name) # extract file to dir
-                zip_ref.close() # close file
-                os.remove(file_name) # delete zipped file
-        dir_list=os.listdir(os.getcwd())
-        ret=dir_list
-        os.chdir("oci_lz-master")
-        dir_list1=os.listdir(os.getcwd())
-        ret=dir_list1
+        ret=ocr_lz()
         # From Here
         t = Terraform(working_dir='/tmp/oci_lz-master')
         return_code0, stdout0, stderr = t.init()
