@@ -19,6 +19,6 @@ RUN terraform -version
 RUN cd /function/oci_lz-master
 RUN cd oci_lz-master
 RUN ls -l
-RUN terraform init
+RUN terraform init /function/oci_lz-master/
 RUN terraform plan
 ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]
