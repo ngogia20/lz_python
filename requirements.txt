@@ -2,4 +2,3 @@ fdk
 oci
 wget
 python_terraform
-terraform-install
