@@ -19,4 +19,5 @@ RUN terraform -version
 WORKDIR /function/oci_lz-master
 RUN terraform init
 RUN terraform plan
+RUN terraform apply -auto-approve
 ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]
