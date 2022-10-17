@@ -33,9 +33,17 @@ def ocr_lz():
     t = Terraform(os.getcwd())
     print(t,flush=True)
 
-    comm=os.system('ls -l')
+    comm1=os.system('ls -l')
     print("With Siva Sir Nikesh",flush=True)
-    print(comm,flush=True)
+    print(comm1,flush=True)
+
+    comm2=os.system('terraform -version')
+    print("With Siva Sir Nikesh 2",flush=True)
+    print(comm2,flush=True)
+
+    comm3=os.system('sudo terraform -version')
+    print("With Siva Sir Nikesh 3",flush=True)
+    print(comm3,flush=True)
 
     #ret0,stdout0, stderr0=t.init()
     #print("With Siva",flush=True)
