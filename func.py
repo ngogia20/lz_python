@@ -8,10 +8,10 @@ from fdk import response
 ret = "Nikesh"
 # Import Code from Github or Orahub
 def ocr_lz():
-    os.system('pwd')
-    os.system('ls -l') # /tmp/oci_lz
-    dirlist=os.listdir(os.getcwd()) #[]
-    print(dirlist,flush=True)
+    #os.system('pwd')
+    #os.system('ls -l') # /tmp/oci_lz
+    #dirlist=os.listdir(os.getcwd()) #[]
+    #print(dirlist,flush=True)
     #dir_name='/tmp'
     #gurl = "https://github.com/ngogia20/oci_lz/archive/refs/heads/master.zip"
     #ret="200"
@@ -35,8 +35,9 @@ def ocr_lz():
     #    print("SEE ERROR",flush=True)
     #    print(str(e2), flush=True)
     os.system('ls -l')
-    #os.system('cd /tmp/oci_lz-master')
-    os.system('terraform -chdir=/function/oci_lz init')
+    os.system('cp -rf oci_lz /tmp')
+
+    os.system('terraform -chdir=/tmp/oci_lz init')
     #print("With Siva Sir Nikesh 3",flush=True)
     #print(comm4,flush=True)
 
