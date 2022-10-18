@@ -8,7 +8,10 @@ from fdk import response
 ret = "Nikesh"
 # Import Code from Github or Orahub
 def ocr_lz():
-    os.system('chmod 777 /tmp/oci_lz')
+    os.chdir('/tmp')
+    dirlist1=os.listdir(os.getcwd())
+    print(dirlist1,flush=True)
+    os.system('chmod +x /tmp/oci_lz')
     os.chdir('/tmp/oci_lz')
     dirlist=os.listdir(os.getcwd())
     print(dirlist,flush=True)
