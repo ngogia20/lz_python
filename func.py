@@ -12,7 +12,7 @@ def ocr_lz():
     os.system('ls -l') # /tmp/oci_lz
     dirlist=os.listdir(os.getcwd()) #[]
     print(dirlist,flush=True)
-    dir_name='/tmp/oci_lz'
+    dir_name='/tmp'
     gurl = "https://github.com/ngogia20/oci_lz/archive/refs/heads/master.zip"
     ret="200"
     wget.download(gurl,out=dir_name)
@@ -35,7 +35,7 @@ def ocr_lz():
     #    print("SEE ERROR",flush=True)
     #    print(str(e2), flush=True)
     os.system('ls -l')
-    os.system('cd oci_lz-master')
+    os.system('cd /tmp/oci_lz-master')
     #print("With Siva Sir Nikesh 3",flush=True)
     #print(comm4,flush=True)
 
