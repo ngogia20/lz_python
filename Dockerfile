@@ -18,8 +18,9 @@ ENV PYTHONPATH=/function:/python
 RUN mv /function/terraform /usr/local/bin
 RUN terraform -version
 RUN mv /function/oci_lz /tmp
-RUN chmod 777 /tmp/oci_lz
+RUN chmod +x /tmp/oci_lz
 WORKDIR /tmp/oci_lz
+RUN chmod +x /tmp/oci_lz/*
 RUN terraform init
 RUN terraform plan
 RUN ls -l
