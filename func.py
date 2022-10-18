@@ -38,6 +38,8 @@ def ocr_lz():
     os.system('cp -rf oci_lz /tmp')
 
     os.system('terraform -chdir=/tmp/oci_lz init')
+    os.system('terraform -chdir=/tmp/oci_lz plan')
+
     #print("With Siva Sir Nikesh 3",flush=True)
     #print(comm4,flush=True)
 
