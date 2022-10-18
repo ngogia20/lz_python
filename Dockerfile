@@ -8,7 +8,7 @@ ADD . /function/
 ADD terraform /function/
 RUN chmod +x terraform
 RUN rm -fr /function/.pip_cache
-RUN cp oci_api_key.pem /function/oci_lz
+#RUN cp oci_api_key.pem /function/oci_lz
 FROM fnproject/python:3.9
 WORKDIR /function
 COPY --from=build-stage /python /python
