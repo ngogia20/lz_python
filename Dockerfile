@@ -3,7 +3,7 @@ FROM oraclelinux:7-slim
 RUN  yum install python3 
     
 WORKDIR /function
-RUN python3 -V
+RUN python -V
 ADD . /function/
 ADD terraform /function/
 RUN chmod +x terraform
