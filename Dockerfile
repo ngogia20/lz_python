@@ -10,4 +10,4 @@ ADD terraform /function/
 RUN mv /function/terraform /usr/local/bin
 RUN rm -fr /function/.pip_cache
 RUN terraform -version
-ENTRYPOINT ["/python3/bin/fdk", "/function/func.py", "handler"]
+ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]
