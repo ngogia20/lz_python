@@ -1,8 +1,7 @@
 FROM oraclelinux:7-slim
 
-RUN  yum install python3 &&\
-     rm -rf /var/cache/yum
-
+RUN  yum install python3 
+    
 WORKDIR /function
 RUN python3 -V
 ADD . /function/
