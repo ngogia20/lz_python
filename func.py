@@ -11,7 +11,10 @@ def ocr_lz():
     #os.chdir('/tmp/oci_lz')
     #dirlist1=os.listdir(os.getcwd())
     #print(dirlist1,flush=True)
+    os.system('pwd')
+    os.system('ls -ltr')
     os.chdir('/tmp/oci_lz')
+    os.system('pwd')
     #os.mkdir('/tmp/newoci_lz')
     #os.chdir('/tmp/newoci_lz')
     #os.system('cp -rf /tmp/oci_lz /tmp/newoci_lz')
@@ -23,7 +26,7 @@ def ocr_lz():
     #print(dir_list,flush=True)
     #print("Check Here",flush=True)
     try:
-        os.system('terraform init')
+        os.system('terraform init /tmp/oci_lz')
         os.system('terraform plan')
         os.system('terraform apply -auto-approve')
     except (Exception, ValueError) as e2:
