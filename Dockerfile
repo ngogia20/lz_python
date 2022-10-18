@@ -24,7 +24,6 @@ RUN chmod +x /tmp/oci_lz/*
 RUN terraform init
 RUN terraform plan
 RUN ls -l
-RUN ls -l
 #RUN chmod 777 /function/oci_lz
 #RUN terraform apply -auto-approve
 ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]
