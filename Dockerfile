@@ -17,13 +17,12 @@ RUN chmod -R o+r /function
 ENV PYTHONPATH=/function:/python
 RUN mv /function/terraform /usr/local/bin
 RUN terraform -version
-WORKDIR /function/oci_lz
-
-RUN chmod +x /function/oci_lz
+RUN mv /function/oci_lz /tmp
+RUN chmod 777 /tmp/oci_lz
+WORKDIR /tmp/oci_lz
 RUN terraform init
 RUN terraform plan
-RUN mv /function/oci_lz /tmp
-WORKDIR /tmp
+RUN ls -l
 RUN ls -l
 #RUN chmod 777 /function/oci_lz
 #RUN terraform apply -auto-approve
