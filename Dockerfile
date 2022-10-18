@@ -17,9 +17,10 @@ ENV PYTHONPATH=/function:/python
 RUN mv /function/terraform /usr/local/bin
 RUN terraform -version
 WORKDIR /function/oci_lz-master
-RUN chmod +x /function/oci_lz-master
+RUN chmod +x /function/oci_lz
 RUN terraform init
 RUN terraform plan
-RUN MV /function/oci_lz-master /tmp
+#RUN mv /function/oci_lz /tmp
+#RUN chmod 777 /tmp/oci_lz-master
 #RUN terraform apply -auto-approve
 ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]
