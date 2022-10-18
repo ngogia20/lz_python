@@ -22,7 +22,7 @@ RUN chmod +x /tmp/oci_lz
 WORKDIR /tmp/oci_lz
 RUN chmod +x /tmp/oci_lz/*
 RUN terraform init
-RUN terraform plan
+# RUN terraform plan
 RUN ls -l
 #RUN chmod 777 /function/oci_lz
 #RUN terraform apply -auto-approve
