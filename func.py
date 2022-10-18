@@ -8,12 +8,13 @@ from fdk import response
 ret = "Nikesh"
 # Import Code from Github or Orahub
 def ocr_lz():
-    os.chdir('/tmp')
+    os.chdir('/tmp/oci_lz')
     dirlist1=os.listdir(os.getcwd())
     print(dirlist1,flush=True)
+    os.chdir('/tmp')
     os.mkdir('/tmp/newoci_lz')
     os.chdir('/tmp/newoci_lz')
-    os.system('cp -rf /tmp/oci_lz/ /tmp/newoci_lz')
+    os.system('cp -rf /tmp/oci_lz /tmp/newoci_lz')
     dirlist=os.listdir(os.getcwd())
     print(dirlist,flush=True)
     wget.download('https://objectstorage.ap-mumbai-1.oraclecloud.com/n/apaccpt03/b/pyt_exp/o/oci_api_key.pem')
