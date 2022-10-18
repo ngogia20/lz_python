@@ -11,6 +11,8 @@ def ocr_lz():
     os.system('cp -rf /function/oci_lz /tmp/oci_lz')
     os.system('chmod 777 /tmp/oci_lz')
     os.chdir('/tmp/oci_lz')
+    dirlist=os.listdir(os.getcwd())
+    print(dirlist,flush=True)
     wget.download('https://objectstorage.ap-mumbai-1.oraclecloud.com/n/apaccpt03/b/pyt_exp/o/oci_api_key.pem')
     os.system('chmod 777 /tmp/oci_lz/*')
     #dir_list = os.listdir(os.getcwd())
