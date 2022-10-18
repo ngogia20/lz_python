@@ -1,6 +1,6 @@
 FROM oraclelinux:7-slim
 
-RUN  yum install python3 
+RUN  yum -y install python3 
     
 WORKDIR /function
 RUN python -V
