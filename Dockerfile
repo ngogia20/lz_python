@@ -22,7 +22,9 @@ WORKDIR /function/oci_lz
 RUN chmod +x /function/oci_lz
 RUN terraform init
 RUN terraform plan
-#RUN mv /function/oci_lz /tmp
-#RUN chmod 777 /tmp/oci_lz-master
+RUN mv /function/oci_lz /tmp
+WORKDIR /tmp
+RUN ls -l
+#RUN chmod 777 /function/oci_lz
 #RUN terraform apply -auto-approve
 ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]
