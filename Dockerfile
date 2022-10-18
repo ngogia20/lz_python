@@ -20,6 +20,8 @@ RUN terraform -version
 RUN mv /function/oci_lz /tmp
 RUN chmod +x /tmp/oci_lz
 WORKDIR /tmp/oci_lz
+RUN ls -l
+RUN echo NikeshSivaAll
 RUN chmod +x /tmp/oci_lz/*
 # RUN terraform init
 # RUN terraform plan
