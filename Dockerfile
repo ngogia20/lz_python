@@ -25,5 +25,5 @@ RUN chmod +x /tmp/oci_lz
 WORKDIR /tmp/oci_lz
 RUN ls -l
 RUN echo NikeshSivaAll
-RUN ls -    
+RUN ls -l    
 ENTRYPOINT ["/python/bin/fdk", "/function/func.py", "handler"]
